@@ -13,7 +13,16 @@ return apply_filters( 'ninja_forms_uploads_field_settings', array(
 		'group' => 'primary',
 		'width' => 'one-half',
 		'help'  => __( 'Save the file to the server.', 'ninja-forms-uploads' ),
-	),
+  ),
+  'overwrite_existing' => array(
+    'name' => 'overwrite_existing',
+    'type' => 'toggle',
+    'value' => '',
+    'label' => __('Overwrite existing', 'ninja-forms-uploads'),
+    'group' => 'primary',
+    'width' => 'one-half',
+    'help' => __( 'Overwrite the existing file, or otherwise append an index.', 'ninja-forms-uploads' ),
+  ),
 	'upload_rename'      => array(
 		'name'  => 'upload_rename',
 		'type'  => 'textbox',

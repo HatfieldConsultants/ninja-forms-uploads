@@ -114,7 +114,7 @@ class NF_FU_Fields_Upload extends NF_Abstracts_Field {
 			$file_name   = sanitize_file_name( basename( $target_file ) );
 			$target_file = $target_path . '/' . $file_name;
 
-			if ( file_exists( $target_file ) ) {
+			if ( file_exists( $target_file ) && empty( $field['overwrite_existing'] ) ) {
 				// Make sure we use a filename that is unique
 				$original_target_file = $target_file;
 
